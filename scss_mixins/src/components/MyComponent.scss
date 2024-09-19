@@ -1,0 +1,131 @@
+@import "../styles/variables/variables.scss";
+@import "../styles/mixins/mixins.scss";
+
+.container {
+  padding: 1rem; // Estilo padrão para mobile
+
+  @include respond-to("small") {
+    padding: 1.5rem;
+  }
+
+  @include respond-to("medium") {
+    padding: 2rem;
+  }
+
+  @include respond-to("large") {
+    padding: 2.5rem;
+  }
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  .main-title {
+    font-size: 2rem;
+
+    @include respond-to("small") {
+      font-size: 2.5rem;
+    }
+
+    @include respond-to("medium") {
+      font-size: 3rem;
+    }
+
+    @include respond-to("large") {
+      font-size: 3.5rem;
+    }
+  }
+
+  .sub-title {
+    font-size: 1.5rem;
+    color: gray;
+
+    @include respond-to("small") {
+      font-size: 2rem;
+    }
+
+    @include respond-to("medium") {
+      font-size: 2.5rem;
+    }
+
+    @include respond-to("large") {
+      font-size: 3rem;
+    }
+  }
+}
+
+.section {
+  margin-bottom: 2rem;
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+
+    @include respond-to("small") {
+      font-size: 1.75rem;
+    }
+
+    @include respond-to("medium") {
+      font-size: 2rem;
+    }
+
+    @include respond-to("large") {
+      font-size: 2.25rem;
+    }
+  }
+
+  .section-text {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+
+    @include respond-to("small") {
+      font-size: 1.25rem;
+    }
+
+    @include respond-to("medium") {
+      font-size: 1.5rem;
+    }
+
+    @include respond-to("large") {
+      font-size: 1.75rem;
+    }
+  }
+
+  .section-image {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+
+    @include respond-to("medium") {
+      width: 80%;
+    }
+
+    @include respond-to("large") {
+      width: 60%;
+    }
+  }
+}
+
+.footer {
+  text-align: center;
+  margin-top: 2rem;
+
+  .footer-link {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #000;
+
+    @include respond-to("small") {
+      margin: 0 1.5rem;
+    }
+
+    @include respond-to("medium") {
+      margin: 0 2rem;
+    }
+
+    @include respond-to("large") {
+      margin: 0 2.5rem;
+    }
+  }
+}
