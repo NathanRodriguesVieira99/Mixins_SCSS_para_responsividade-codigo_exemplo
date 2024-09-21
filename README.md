@@ -38,8 +38,8 @@ Defina o mixin para responsividade, utilizando os breakpoints criados:
 3.1. Importe as variáveis e mixins
 Antes de aplicar os estilos, importe os arquivos onde as variáveis e os mixins foram definidos:
 ```
-@import "../styles/variables/variables.scss" as*;
-@import "../styles/mixins/mixins.scss" as*;
+@import "../styles/variables/variables.scss" as variable;
+@import "../styles/mixins/mixins.scss" as mixins;
 ```
 
 3.2. Faça a estilização
@@ -48,15 +48,15 @@ Utilize os mixins para criar estilos responsivos, conforme o exemplo abaixo:
 .container {
   padding: 1rem; // Estilo padrão para mobile first
 
-  @include respond-to("small") {
+  @include mixins.respond-to("small") {
     padding: 1.5rem;
   }
 
-  @include respond-to("medium") {
+  @include mixins.respond-to("medium") {
     padding: 2rem;
   }
 
-  @include respond-to("large") {
+  @include mixins.respond-to("large") {
     padding: 2.5rem;
   }
 }
