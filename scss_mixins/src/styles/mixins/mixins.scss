@@ -10,3 +10,17 @@
     @warn "No breakpoint defined for `#{$size}`.";
   }
 }
+
+//mixins dark / light
+@mixin theme-dark {
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+}
+
+//mixins light
+@mixin theme-light {
+  @media (prefers-color-scheme: light) {
+    @content;
+  }
+}
